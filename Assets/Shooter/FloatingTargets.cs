@@ -8,6 +8,7 @@ public class FloatingTargets : MonoBehaviour
     List<Brick> bricks = null;
     float countdown = 0.0f;
 
+    public GameObject hiteffect = null;
     void Start()
     {
         Object b = Resources.Load("Brick");
@@ -40,11 +41,47 @@ public class FloatingTargets : MonoBehaviour
         if(countdown <=0)
         {
 
-            int idx = (int)(Random.value * bricks.Count);
-            bricks[idx].SetTargetable(3.0f);
+            for (int i = 0; i < 3; i++)
+            {
+                int idx = (int)(Random.value * bricks.Count);
+                bricks[idx].SetTargetable(4.0f);
 
-            countdown = 4.0f; 
+                countdown = 6.0f;
+            }
         }
-        
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            //TryHit(Input.mousePosition);
+
+        }
+    }
+
+    public void TryHit(Vector3 screenpos)
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(screenpos);
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            Transform objectHit = hit.transform;
+            Brick br = objectHit.parent.GetComponentInChildren<Brick>();
+            if (br != null)
+            {
+                if (br.SetHit())
+                {
+
+
+                }
+                //hit.transform.position
+                if (hiteffect != null)
+                {
+                    HitEffect he = hiteffect.GetComponent<HitEffect>();
+                    he.Place(hit.transform.position);
+                }
+            }
+            // Do something with the object that was hit by the raycast.
+        }
+
     }
 }

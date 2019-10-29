@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Shooter/WildWildWest.unity
+    guid: da79b6b15bd51471cbd46265f12e687c
+  - enabled: 0
     path: Assets/ExplosionLight/ExplosionLight.unity
     guid: 7b0774b5d3ae5487cbe1993860d4cad1
   m_configObjects: {}

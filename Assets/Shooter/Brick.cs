@@ -84,13 +84,17 @@ public class Brick : MonoBehaviour
 
     public bool SetHit()
     {
-        state = State.Hit;
-        countDown = 2.0f;
-        goUnlit.SetActive(false);
-        goLit.SetActive(false);
-        goHit.SetActive(true);
+        if (state == State.Lit)
+        {
+            state = State.Hit;
+            countDown = 2.0f;
+            goUnlit.SetActive(false);
+            goLit.SetActive(false);
+            goHit.SetActive(true);
+            return true;
+        }
 
-        return true;
+        return false;
     }
 
     // Update is called once per frame
