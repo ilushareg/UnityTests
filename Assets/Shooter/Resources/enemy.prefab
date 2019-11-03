@@ -149,11 +149,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4896880298895633874}
     m_Modifications:
-    - target: {fileID: 7993433616443826280, guid: 24569dd1cadce465886aeb4b488ecc39,
-        type: 3}
-      propertyPath: m_Name
-      value: cowboy_0
-      objectReference: {fileID: 0}
     - target: {fileID: 7993433616443826284, guid: 24569dd1cadce465886aeb4b488ecc39,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -207,6 +202,26 @@ PrefabInstance:
     - target: {fileID: 7993433616443826284, guid: 24569dd1cadce465886aeb4b488ecc39,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993433616443826280, guid: 24569dd1cadce465886aeb4b488ecc39,
+        type: 3}
+      propertyPath: m_Name
+      value: cowboy_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993433616524090897, guid: 24569dd1cadce465886aeb4b488ecc39,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993433616524090897, guid: 24569dd1cadce465886aeb4b488ecc39,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993433616524090897, guid: 24569dd1cadce465886aeb4b488ecc39,
+        type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7993433616443826287, guid: 24569dd1cadce465886aeb4b488ecc39,

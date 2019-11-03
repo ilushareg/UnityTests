@@ -5,10 +5,12 @@ using UnityEngine;
 public class EnemyCharacter : MonoBehaviour
 {
     float lifeCountdown = 0.0f;
+    Animator animator = null;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //find Animator
+        animator = transform.GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,8 @@ public class EnemyCharacter : MonoBehaviour
     public void Reset(float livingTime)
     {
         lifeCountdown = livingTime;
+        animator.Rebind();
+
         //find animator
         //find 
     }
