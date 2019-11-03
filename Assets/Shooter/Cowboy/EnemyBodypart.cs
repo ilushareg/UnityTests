@@ -20,11 +20,15 @@ public class EnemyBodypart : MonoBehaviour
     public bool Hit()
     {
         //find parent EnemyCharacter monobeh and hit it
-        Transform p = this.transform.parent;
+        Transform p = this.transform;
         while(p)
         {
-            EnemyCharacter character = p.GetComponent<EnemyCharacter>();
-            character.Hit(partname);
+            EnemyCharacter character = p.GetComponentInChildren<EnemyCharacter>();
+            if(character!=null)
+            { 
+                character.Hit(partname);
+                break;
+            }
             p = p.parent;
         }
 

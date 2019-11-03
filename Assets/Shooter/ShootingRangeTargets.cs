@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShootingRangeTargets : MonoBehaviour
 {
+    
     float countdown = 0.0f;
     public GameObject hiteffect = null;
 
@@ -14,7 +15,7 @@ public class ShootingRangeTargets : MonoBehaviour
     {
         Object b = Resources.Load("enemy");
 
-        for(int i=0; i<enemies.Count; i++)
+        for(int i=0; i<3; i++)
         { 
             GameObject bO = (GameObject)Object.Instantiate(b);
             enemies.Add(bO);
@@ -24,12 +25,12 @@ public class ShootingRangeTargets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (countdown > 0)
+        if (countdown >= 0)
         {
             countdown -= Time.deltaTime;
         }
 
-        if (countdown <= 0)
+        if (countdown < 0)
         {
             //move characters around
 
@@ -39,7 +40,8 @@ public class ShootingRangeTargets : MonoBehaviour
                 GameObject go = enemies[i];
                 EnemyCharacter ec = go.GetComponentInChildren<EnemyCharacter>();
 
-                ec.Reset();
+                ec.Reset(4.0f);
+                go.transform.position = pos;
 
                 countdown = 6.0f;
             }
@@ -60,23 +62,24 @@ public class ShootingRangeTargets : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             Transform objectHit = hit.transform;
-
-            EnemyBodypart bp = objectHit.parent.GetComponentInChildren<EnemyBodypart>();
-            if (bp != null)
+            
+            if (objectHit.parent != null)
             {
-                if (bp.Hit())
+                EnemyBodypart bp = objectHit.parent.GetComponentInChildren<EnemyBodypart>();
+                if (bp != null)
                 {
-
-
+                    if (bp.Hit())
+                    {
+                    }
                 }
-                //hit.transform.position
-                if (hiteffect != null)
-                {
-                    HitEffect he = hiteffect.GetComponent<HitEffect>();
-                    he.Place(hit.transform.position);
-                }
+
             }
             // Do something with the object that was hit by the raycast.
+            if (hiteffect != null)
+            {
+                HitEffect he = hiteffect.GetComponent<HitEffect>();
+                he.Place(hit.point);
+            }
         }
 
     }

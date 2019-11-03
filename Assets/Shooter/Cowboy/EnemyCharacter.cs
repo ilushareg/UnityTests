@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyCharacter : MonoBehaviour
 {
+    float lifeCountdown = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,10 @@ public class EnemyCharacter : MonoBehaviour
     }
 
     //preparec character for new life
-    public void Reset()
+    public void Reset(float livingTime)
     {
-        
+        lifeCountdown = livingTime;
+        //find animator
+        //find 
     }
 }
