@@ -39,8 +39,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7993433614848499570}
+  - component: {fileID: 4054915324987184315}
+  - component: {fileID: 751081589630619947}
   m_Layer: 0
-  m_Name: bone_10
+  m_Name: head_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,6 +63,32 @@ Transform:
   m_Father: {fileID: 7993433615606690832}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4054915324987184315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993433614848499571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031a05321dbf549b49cb3b0a3e3cc087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partname: head
+--- !u!65 &751081589630619947
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993433614848499571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.85, z: 0.2}
+  m_Center: {x: 0.32, y: 0, z: 0}
 --- !u!1 &7993433614896426363
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,8 +356,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7993433615892647967}
+  - component: {fileID: 4992051643389927734}
+  - component: {fileID: 8015862156530728602}
   m_Layer: 0
-  m_Name: bone_1
+  m_Name: body_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,6 +383,32 @@ Transform:
   m_Father: {fileID: 7993433616443826284}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4992051643389927734
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993433615892647960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1857352, y: 1, z: 0.2668969}
+  m_Center: {x: 0.60817, y: 2.0351165e-10, z: -0.04485354}
+--- !u!114 &8015862156530728602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993433615892647960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031a05321dbf549b49cb3b0a3e3cc087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partname: body
 --- !u!1 &7993433615941689928
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +511,7 @@ GameObject:
   - component: {fileID: 7993433616443826285}
   - component: {fileID: 7993433616443826286}
   - component: {fileID: 7993433616443826287}
+  - component: {fileID: 3183969846780089345}
   m_Layer: 0
   m_Name: cowboy_0
   m_TagString: Untagged
@@ -577,6 +634,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3183969846780089345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993433616443826280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f11607b73cd24560af68c133ca55869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7993433616524090898
 GameObject:
   m_ObjectHideFlags: 0

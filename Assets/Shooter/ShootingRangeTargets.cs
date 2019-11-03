@@ -66,10 +66,10 @@ public class ShootingRangeTargets : MonoBehaviour
                 GameObject go = enemies[i];
                 EnemyCharacter ec = go.GetComponentInChildren<EnemyCharacter>();
 
-                ec.Reset(4.0f);
+                ec.Reset(6.0f);
                 go.transform.position = pos;
 
-                countdown = 6.0f;
+                countdown = 8.0f;
             }
         }
 
