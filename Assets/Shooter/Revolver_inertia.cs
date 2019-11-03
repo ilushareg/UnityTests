@@ -133,7 +133,7 @@ public class Revolver_inertia : MonoBehaviour
                     {
                         Vector3 worldPoint = tr.TransformPoint(new Vector3(tr.pivot.x, tr.pivot.y, 0.0f));
 
-                        FloatingTargets targets = GetComponentInParent<FloatingTargets>();
+                        ShootingRangeTargets targets = GetComponentInParent<ShootingRangeTargets>();
                         targets.TryHit(worldPoint);
 
                     }
