@@ -42,6 +42,8 @@ public class EnemyCharacter : MonoBehaviour
     {
         //Debug.Log("hit");
         animator.SetBool("Die", true);
+        shootCountdown = -1.0f;
+        lifeCountdown = -1.0f;
     }
 
     //preparec character for new life
