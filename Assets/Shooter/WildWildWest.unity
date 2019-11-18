@@ -503,11 +503,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1796334438}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: beee70847e96c744a8928cdae5d57e24,
-        type: 3}
-      propertyPath: m_Name
-      value: Revolver
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: beee70847e96c744a8928cdae5d57e24,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -562,6 +557,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: beee70847e96c744a8928cdae5d57e24,
+        type: 3}
+      propertyPath: m_Name
+      value: Revolver
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beee70847e96c744a8928cdae5d57e24, type: 3}
@@ -808,6 +808,7 @@ GameObject:
   - component: {fileID: 674180589}
   - component: {fileID: 674180590}
   - component: {fileID: 674180591}
+  - component: {fileID: 674180592}
   m_Layer: 0
   m_Name: Geometry
   m_TagString: Untagged
@@ -894,9 +895,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674180585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 878b747b9001bcc419d24384f260933f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Aim_Crosshair: {fileID: 746368375}
+--- !u!114 &674180592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674180585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6786874a98d12574fb6b4a5849b720e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Aim_Crosshair: {fileID: 746368375}
