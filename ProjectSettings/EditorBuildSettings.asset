@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/WipeoutPXL/wipeout.unity
+    guid: e1771c592c10d451e966e7cca264a430
+  - enabled: 0
     path: Assets/Shooter/WildWildWest.unity
     guid: da79b6b15bd51471cbd46265f12e687c
   - enabled: 0
